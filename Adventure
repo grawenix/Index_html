@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Adventure Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .choice { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Text Adventure Game</h1>
+    <div id="game"></div>
+    <script>
+        const gameDiv = document.getElementById('game');
+
+        function startGame() {
+            gameDiv.innerHTML = `
+                <p>Добро пожаловать в простую приключен>
+                <p>Выберите свою роль:</p>
+                <button class="choice" onclick="mageRol>
+                <button class="choice" onclick="archerR>
+                <button class="choice" onclick="knightR>
+                <button class="choice" onclick="paladin>
+            `;
+        }
+
+        function mageRole() {
+            gameDiv.innerHTML = `
+                <p>Вы выбрали роль мага. Ваша задача - >
+                <button class="choice" onclick="mageRui>
+                <button class="choice" onclick="mageArt>
+            `;
+        }
+
+        function mageRuins() {
+            gameDiv.innerHTML = `
+                <p>Вы исследуете древние руины и находи>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function mageArtifact() {
+            gameDiv.innerHTML = `
+                <p>Вы нашли магический артефакт. Он изл>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function archerRole() {
+            gameDiv.innerHTML = `
+                <p>Вы выбрали роль лучника. Ваша задача>
+                <button class="choice" onclick="archerF>
+                <button class="choice" onclick="archerT>    `;
+        }
+
+        function archerForest() {
+            gameDiv.innerHTML = `
+                <p>Вы исследуете лес и находите следы в>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function archerTreasure() {
+            gameDiv.innerHTML = `
+                <p>Вы нашли скрытое сокровище в лесу. О>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function knightRole() {
+            gameDiv.innerHTML = `
+                <p>Вы выбрали роль рыцаря. Ваша задача >
+                <button class="choice" onclick="knightC>
+                <button class="choice" onclick="knightP>
+            `;
+        }
+
+        function knightCastle() {
+            gameDiv.innerHTML = `
+                <p>Вы исследуете замок и находите злобн>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function knightPrincess() {
+            gameDiv.innerHTML = `
+                <p>Вы нашли похищенную принцессу в лесу>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function paladinRole() {
+            gameDiv.innerHTML = `
+                <p>Вы выбрали роль паладина. Ваша задач>
+                <button class="choice" onclick="paladin>
+                <button class="choice" onclick="paladin>
+            `;
+        }
+
+        function paladinTemple() {
+            gameDiv.innerHTML = `
+                <p>Вы исследуете священный храм и наход>
+                <button class="choice" onclick="endGame><button class="choice" onclick="endGame>
+            `;
+        }
+
+        function paladinArtifact() {
+            gameDiv.innerHTML = `
+                <p>Вы нашли священный артефакт. Он излу>
+                <button class="choice" onclick="endGame>
+                <button class="choice" onclick="endGame>
+            `;
+        }
+
+        function endGame(message) {
+            gameDiv.innerHTML = `
+                <p>${message}</p>
+                <button class="choice" onclick="startGa>
+            `;
+        }
+
+        startGame();
+    </script>
+</body>
+</html>
